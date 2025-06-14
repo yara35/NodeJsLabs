@@ -34,7 +34,7 @@ const getAllPost = async (req, res) => {
 
   res.status(200).json({
     status: "Success",
-    message: "Users fetched successfully",
+    message: "Posts fetched successfully",
     data: posts,
   });
 };
@@ -49,7 +49,6 @@ const getPostById = async (req, res) => {
     });
   }
 
-  //   const user = await User.findById(id);
   const post = await Post.findOne({ _id: id }, { title: 1, description: 1 });
 
   if (!post) {
