@@ -100,7 +100,7 @@ const updatePostById = async (req, res) => {
   res.status(200).json({
     status: "Success",
     message: "Post updated successfully",
-    data: user,
+    data: post,
   });
 };
 
